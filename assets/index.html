@@ -5,39 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exo-shifumi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body>
+<!-- A voir pour le footer -->
+
+<body class="min-vh-100">
 
     <header>
 
     </header>
-    <h1></h1>
 
     <main class="text-center">
 
-
         <div><img src="/assets/img/logo-shifumi.png" alt="shifumi"></div>
 
-        <div class="d-flex w-100 justify-content-around mt-3">
 
-            <button class="border fs-2" onclick="userChoice()">Pierre</button>
-
-
-            <button class="border fs-2" onclick="userChoice()">Feuille</button>
-
-
-            <button class="border fs-2" onclick="userChoice()">Ciseaux</button>
-
+        <div class="my-2">
+            <h1>Bienvenue sur le jeu du Shifumi !</h1>
         </div>
+
+        <p class="d-inline-flex gap-1 my-2">
+            <a class="btn buttonRegles" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                <b>Règles du jeu :</b>
+            </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="regles">
+                <p>Règles du jeu : Le jeu « pierre – feuille – ciseaux » est simple, il consiste pour les deux
+                    adversaires à s’affronter en utilisant soit la pierre, la
+                    feuille ou la paire de ciseaux.</p>
+                <p>
+                    « La pierre » casse « les ciseaux » donc gagne.</p>
+                <p>« La feuille » enveloppe « la pierre » donc gagne.</p>
+                <p>« Les ciseaux » découpent « la feuille » donc gagne.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="my-3 mb-5">
+            <h2>Choisissez entre "Pierre", "Feuille" ou "Ciseaux"</h2>
+        </div>
+
+
+
+        <div class="d-flex w-100 justify-content-around">
+
+            <!-- Mettre des '' si il y a déja des "" dans la ligne -->
+            <div class="border card"><img src="/assets/img/pierre.png" alt="pierre"><button
+                    class="border fs-2 px-3 rounded-3" onclick="recupererChoix('pierre')">Pierre</button></div>
+
+
+
+            <div class="border card"><img src="/assets/img/feuille.png" alt="feuille">
+                <button class="border fs-2 px-3 rounded-3" onclick="recupererChoix('feuille')">Feuille</button>
+            </div>
+
+            <div class="border card"><img src="/assets/img/ciseaux.png" alt="ciseaux">
+                <button class="border fs-2 px-3 rounded-3" onclick="recupererChoix('ciseaux')">Ciseaux</button>
+            </div>
+        </div>
+
+        <div id="resultat"></div>
 
 
     </main>
 
 
+    <footer class="mt-auto text-center"> YUUUUUUUUUUUUR</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script src="/assets/js/script.js"></script>
 </body>
 
