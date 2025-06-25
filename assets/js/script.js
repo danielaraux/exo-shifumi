@@ -4,7 +4,7 @@
 // Pour récupérer ce que l'user a choisi et ne rien mettre au départ sur le choix de l'IA.
 let choixJoueur = ""
 let choixIA = ""
-let messageAttente = ""
+
 
 let scoreJoueur = 0
 let scoreOrdinateur = 0
@@ -38,7 +38,6 @@ function battle(choixJoueur, choixIA) {
         message = "Vous avez joué Pierre, l'ordinateur a joué Ciseaux. \nVous gagnez !"
         document.getElementById("resultat").innerText = message
         document.getElementById("scoreJoueur").innerText = scoreJoueur += 1
-
 
 
     } else if (choixJoueur == "feuille" && choixIA == "pierre") {
