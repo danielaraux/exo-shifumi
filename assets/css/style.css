@@ -1,8 +1,61 @@
 body {
     background-color: beige;
+    font-family: "Unkempt", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
 }
 
-img {
+
+.logo {
+    height: 100%;
+    width: 150px;
+
+    @media (max-width: 414px) {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.logoPierre,
+.logoFeuille,
+.logoCiseaux {
+    height: 150px;
+    width: 120px;
+}
+
+.cardCiseaux {
+    background-color: beige;
+    align-items: center;
+}
+
+
+button {
+    background-color: #E65C50;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+
+.btn-modal {
+    background-color: #9dd1bf;
+}
+
+.regles {
+    background-color: beige
+}
+
+.buttonRegles {
+    background-color: #9dd1bf;
+}
+
+/* .gif {
     height: 250px;
     width: 250px;
-}
+} */
